@@ -11,7 +11,7 @@
 
 
 
-<title>Laura Bulmer: My Website!</title>
+<title>Academic and Professional Life</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,9 +29,6 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -224,69 +221,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -294,16 +228,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -353,62 +277,24 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Laura Bulmer: My Website!</h1>
+<h1 class="title toc-ignore">Academic and Professional Life</h1>
 
 </div>
 
 
-<p>I am a current Master of Public Health student at Columbia University
-Mailman School. See below for some more info on me, and feel to reach
-out if you’d like to connect!</p>
-<div id="background-and-personal-life" class="section level2">
-<h2>Background and Personal Life</h2>
-<p>I was born in Albany, NY and lived there with my parents and younger
-brother up until college. I attended Northeastern University in Boston,
-MA and studied Finance with a minor in Argumentation &amp; Law. I moved
-to New York City after graduating from college in 2021, and have been
-here ever since.</p>
-<p>I now live in Upper West Side, and am enjoying splitting my time
-between work and school. In my free time, I love all things outdoors
-(running, skiing, hiking), spending time with my friends, trying new
-restaurants, and daily walks in Central Park.</p>
-</div>
-<div id="professional-life" class="section level2">
-<h2>Professional Life</h2>
-<p>Post college, I began working at KPMG within the State and Local
-Government Regulatory &amp; Compliance team. My team served mainly state
-government clients reacting to the COVID19 pandemic, seeking assistance
-with grants management or monitoring, and activities related to disaster
-recover.</p>
-<p>I spent the majority of my first year working on a project for the
-New York City Department of Health and Mental Hygiene, supporting their
-operations of the vaccine distribution centers throughout the city.
-After that project concluded, I split my time between various other
-projects for New York State, Massachusetts, Colorado, and the city of
-New York.</p>
-<p>I’m currently pursuing a Master of Public Health degree at Columbia
+<p>My background is in state and local government consulting, and I am
+currently pursuing a Master of Public Health degree at Columbia
 University’s Mailman School of Public Health, where I focus on Health
 Policy &amp; Management and am working toward a certificate in Applied
-Biostatistics. I began the program in September 2023 with an intended
-graduation date of May 2025, and am continuing my work on grants
-monitoring projects for the state of Colorado alongside my studies.</p>
-<p>For more information regarding my academic and professional
-background and interests, please visit my <a href="resume.html">resume
-page</a>.</p>
-</div>
-<div id="connect-with-me" class="section level2">
-<h2>Connect With Me</h2>
-<p>If you would like to connect, please reach out via the below
-methods:</p>
-<ul>
-<li></li>
-</ul>
-</div>
+Biostatistics.</p>
+<p>Post graduation, I am interested in working within the field of
+Health Policy consulting. For more detailed information regarding my
+academic and professional details, please refer to the resume below.</p>
+<p>While you’re here, add me on <a
+href="https://www.linkedin.com/in/laura-bulmer-935ab4171">LinkedIn</a>!</p>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -441,35 +327,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
-    $('.unlisted.unnumbered').addClass('toc-ignore')
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

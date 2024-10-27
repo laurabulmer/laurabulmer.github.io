@@ -8,8 +8,24 @@ output:
 
 I am a current Master of Public Health student at Columbia University Mailman School. See below for some more info on me, and feel to reach out if you'd like to connect!
 
-## Background
+## Background and Personal Life
+
+I was born in Albany, NY and lived there with my parents and younger brother up until college. I attended Northeastern University in Boston, MA and studied Finance with a minor in Argumentation & Law. I moved to New York City after graduating from college in 2021, and have been here ever since. 
+
+I now live in Upper West Side, and am enjoying splitting my time between work and school. In my free time, I love all things outdoors (running, skiing, hiking), spending time with my friends, trying new restaurants, and daily walks in Central Park. 
 
 ## Professional Life
 
-## Personal Life
+Post college, I began working at KPMG within the State and Local Government Regulatory & Compliance team. My team served mainly state government clients reacting to the COVID19 pandemic, seeking assistance with grants management or monitoring, and activities related to disaster recover. 
+
+I spent the majority of my first year working on a project for the New York City Department of Health and Mental Hygiene, supporting their operations of the vaccine distribution centers throughout the city. After that project concluded, I split my time between various other projects for New York State, Massachusetts, Colorado, and the city of New York.
+
+I’m currently pursuing a Master of Public Health degree at Columbia University’s Mailman School of Public Health, where I focus on Health Policy & Management and am working toward a certificate in Applied Biostatistics. I began the program in September 2023 with an intended graduation date of May 2025, and am continuing my work on grants monitoring projects for the state of Colorado alongside my studies.
+
+For more information regarding my academic and professional background and interests, please visit my [resume page](resume.html).
+
+## Connect With Me
+
+If you would like to connect, please reach out via the below methods:
+
+* 

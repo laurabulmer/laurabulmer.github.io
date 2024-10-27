@@ -2,9 +2,9 @@
 title: "About"
 ---
 
-# About this site
+#### About this site ...
 
-Here I'm going to put a quick about section.
+This site is hosted on github. The source code can be found on my github, under the repository laurabulmer.github.io.
 
 Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
 
