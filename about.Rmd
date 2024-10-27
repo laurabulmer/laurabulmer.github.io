@@ -6,6 +6,6 @@ title: "About"
 
 This site is hosted on github. The source code can be found on my github, under the repository laurabulmer.github.io.
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+This site was coded in R within Rstudio, utilizing RMarkdown files rendering to HTML.
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+I will continue to update this site, so check back often for updates on me!
