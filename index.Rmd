@@ -1,0 +1,15 @@
+---
+title: "Laura Bulmer: My Website!"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+I am a current Master of Public Health student at Columbia University Mailman School. See below for some more info on me, and feel to reach out if you'd like to connect!
+
+## Background
+
+## Professional Life
+
+## Personal Life
