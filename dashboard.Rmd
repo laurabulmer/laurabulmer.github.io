@@ -1,0 +1,27 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+```
+
+```{r}
+data("rest_inspec")
+
+rest_clean =
+  rest_inspec %>%
+  mutate(
+    inspec_year = as.numeric(format(inspection_date, "%Y"))
+  ) %>%
+  filter(inspec_year == 2016) %>%
+  select (boro, critical_flag, cuisine_description, inspection_date, inspec_year, score)
+```
+
