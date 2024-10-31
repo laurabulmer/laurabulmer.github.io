@@ -11,7 +11,7 @@ navbar:
       href: http://github.com/laurabulmer
     - icon: fa-brands fa-linkedin
       href: https://www.linkedin.com/in/laura-bulmer-935ab4171
-     - text: "HW4:Q2 Dashboard"
+    - text: "HW4:Q2 Dashboard"
       href: hw4_dashboard.html     
 output:
   html_document:
