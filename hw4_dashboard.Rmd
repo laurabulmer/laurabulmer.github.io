@@ -21,10 +21,11 @@ rest_clean =
   mutate(zipcode = as.character(zipcode)) %>%
   drop_na(score) %>%
   mutate(
-    inspec_year = as.numeric(format(inspection_date, "%Y"))
+    inspec_year = as.numeric(format(inspection_date, "%Y")),
   ) %>%
+  mutate(month = month(inspection_date))%>%
   filter(inspec_year == 2016) %>%
-  select (boro, zipcode, critical_flag, cuisine_description, inspection_date, inspec_year, score)
+  select (boro, zipcode, critical_flag, cuisine_description, inspection_date, inspec_year, month, score)
 ```
 
 ```{r}
@@ -69,6 +70,12 @@ rest_clean %>%
 ### Chart C
 
 ```{r}
-
+rest_clean %>%
+  mutate(
+    boro = na_if(boro, "Missing") 
+  ) %>%
+  count(month,boro)%>%
+  plot_ly(x=~month, y = ~n, type = "scatter", mode = "lines+markers",
+          color = ~boro, colors = "viridis")
 ```
 
