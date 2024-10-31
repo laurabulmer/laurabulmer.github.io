@@ -1,5 +1,5 @@
 ---
-title: "Dashboard"
+title: "hw4_dashboard"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -13,13 +13,12 @@ library(p8105.datasets)
 library(plotly)
 ```
 
-Tidying up the data.
-
 ```{r}
 data("rest_inspec")
 
 rest_clean =
   rest_inspec %>%
+  mutate(zipcode = as.character(zipcode)) %>%
   drop_na(score) %>%
   mutate(
     inspec_year = as.numeric(format(inspection_date, "%Y"))
@@ -28,7 +27,15 @@ rest_clean =
   select (boro, zipcode, critical_flag, cuisine_description, inspection_date, inspec_year, score)
 ```
 
-Creating plot 1
+```{r}
+
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
 
 ```{r}
 rest_clean %>%
@@ -43,16 +50,25 @@ rest_clean %>%
   )
 ```
 
+Column {data-width=350}
+-----------------------------------------------------------------------
 
-Creating plot 2
+### Chart B
+
 ```{r}
-
 rest_clean %>%
   filter (boro == "QUEENS") %>%
-  plot_ly( x = ~zipcode, y = ~score, type = "box"
-    
+      filter (critical_flag == "Critical")%>%
+  count(zipcode)%>%
+  mutate(zipcode = fct_reorder(zipcode, n))%>%
+  plot_ly( x = ~zipcode, y = ~n, type = "bar", 
+           color = ~zipcode, colors = "viridis"
   )
-  
 ```
 
+### Chart C
+
+```{r}
+
+```
 
