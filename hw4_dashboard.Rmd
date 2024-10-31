@@ -1,5 +1,5 @@
 ---
-title: "hw4_dashboard"
+title: "HW4:Q2 Dashboard - NYC Restaurant Inspections in 2016"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -64,7 +64,11 @@ rest_clean %>%
   mutate(zipcode = fct_reorder(zipcode, n))%>%
   plot_ly( x = ~zipcode, y = ~n, type = "bar", 
            color = ~zipcode, colors = "viridis"
-  )
+  ) %>%
+  layout(title = "Number of 'Critical' Inspections in Queens by Zip Code",
+         xaxis = list(title = "Zip Code"),               # X-axis title
+         yaxis = list(title = "Number of 'Critical' Inspections"),
+         legend = list(title = list(text = "Zipcode")))
 ```
 
 ### Chart C
@@ -76,6 +80,13 @@ rest_clean %>%
   ) %>%
   count(month,boro)%>%
   plot_ly(x=~month, y = ~n, type = "scatter", mode = "lines+markers",
-          color = ~boro, colors = "viridis")
+          color = ~boro, colors = "viridis")%>%
+  
+  layout(title = "Number of Inspections by Month",
+         xaxis = list(title = "Month", 
+                      tickvals = 1:12, 
+                      ticktext = month.abb),
+         yaxis = list(title = "Number of Inspections"),
+         legend = list(title = list(text = "Borough")))
 ```
 
