@@ -33,7 +33,7 @@ rest_clean =
 ```
 
 
-Column {data-width=650}
+Column {data-width=550}
 -----------------------------------------------------------------------
 
 ### Chart A
@@ -46,32 +46,17 @@ rest_clean %>%
   plot_ly(x = ~boro, y = ~score, type = "box", color = ~boro, 
           colors = "viridis", marker = list(opacity = 0.1)) %>%
   layout(
+    title = "Distribution of Inspection Scores",
     xaxis = list(title = "Borough"),
-    yaxis = list(title = "Restaurant Inspection Score")
+    yaxis = list(title = "Restaurant Inspection Score"),
+    legend = list(title = list(text = "Borough"))
   )
 ```
 
-Column {data-width=350}
+Column {data-width=450}
 -----------------------------------------------------------------------
 
 ### Chart B
-
-```{r}
-rest_clean %>%
-  filter (boro == "QUEENS") %>%
-      filter (critical_flag == "Critical")%>%
-  count(zipcode)%>%
-  mutate(zipcode = fct_reorder(zipcode, n))%>%
-  plot_ly( x = ~zipcode, y = ~n, type = "bar", 
-           color = ~zipcode, colors = "viridis"
-  ) %>%
-  layout(title = "Number of 'Critical' Inspections in Queens by Zip Code",
-         xaxis = list(title = "Zip Code"),               # X-axis title
-         yaxis = list(title = "Number of 'Critical' Inspections"),
-         legend = list(title = list(text = "Zipcode")))
-```
-
-### Chart C
 
 ```{r}
 rest_clean %>%
@@ -90,3 +75,19 @@ rest_clean %>%
          legend = list(title = list(text = "Borough")))
 ```
 
+### Chart C
+
+```{r}
+rest_clean %>%
+  filter (boro == "QUEENS") %>%
+      filter (critical_flag == "Critical")%>%
+  count(zipcode)%>%
+  mutate(zipcode = fct_reorder(zipcode, n))%>%
+  plot_ly( x = ~zipcode, y = ~n, type = "bar", 
+           color = ~zipcode, colors = "viridis"
+  ) %>%
+  layout(title = "'Critical' Inspections in Queens",
+         xaxis = list(title = "Zip Code"),               # X-axis title
+         yaxis = list(title = "Number of 'Critical' Inspections"),
+         legend = list(title = list(text = "Zipcode")))
+```
